@@ -20,14 +20,14 @@ sway-desktop-vnc:
             # SKIPs with `unknown verb "cdp"`. (box/<distro> adopts the matching @github pin
             # via reconcile later — the deliberate cross-repo lag; the R10 bed loads the
             # LOCAL candy via the superproject override.)
-            - plugin-cdp
+            - '@github.com/opencharly/plugin-cdp/candy/plugin-cdp:v2026.237.1416'
             # plugin-vnc is the OUT-OF-TREE plugin that serves the `vnc:` check verb (the
             # RFB/VNC client lives there, not in charly's core check surface). This candy
             # AUTHORS `vnc:` checks (status/screenshot), so requiring plugin-vnc puts it in
             # every composing image's scanned candy set; collectReferencedPluginWords
             # build-connects it before the baked `vnc:` checks dispatch — otherwise they
             # SKIP with `unknown verb "vnc"`. (Same cross-repo reconcile lag as plugin-cdp.)
-            - plugin-vnc
+            - '@github.com/opencharly/plugin-vnc/candy/plugin-vnc:v2026.237.1430'
             # plugin-dbus is the OUT-OF-TREE plugin that serves the `dbus:` check verb (the
             # D-Bus driver lives there, not in charly's core check surface — EXEC-based, driving
             # the venue's session bus via gdbus over the executor reverse channel). This candy
@@ -35,7 +35,7 @@ sway-desktop-vnc:
             # image's scanned candy set; collectReferencedPluginWords build-connects it before the
             # baked `dbus:` check dispatches — otherwise it SKIPs with `unknown verb "dbus"`.
             # (Same cross-repo reconcile lag as plugin-cdp.)
-            - plugin-dbus
+            - '@github.com/opencharly/plugin-dbus/candy/plugin-dbus:v2026.237.1417'
             # plugin-wl is the OUT-OF-TREE plugin that serves the `wl:` check verb (the
             # Wayland/sway desktop driver lives there, not in charly's core check surface —
             # EXEC-based, driving the venue's compositor via wlrctl/grim/wtype/swaymsg over the
@@ -44,7 +44,7 @@ sway-desktop-vnc:
             # collectReferencedPluginWords build-connects it before the baked `wl:` check
             # dispatches — otherwise it SKIPs with `unknown verb "wl"`. (Same cross-repo reconcile
             # lag as plugin-cdp.)
-            - plugin-wl
+            - '@github.com/opencharly/plugin-wl/candy/plugin-wl:v2026.237.1430'
         candy:
             - '@github.com/opencharly/layer-sway-desktop:v2026.237.1056'
             - '@github.com/opencharly/pod-wayvnc:v2026.237.559'
