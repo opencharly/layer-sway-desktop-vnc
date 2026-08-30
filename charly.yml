@@ -1,7 +1,7 @@
 version: 2026.232.0520
 sway-desktop-vnc:
     candy:
-        version: 2026.242.0830
+        version: 2026.242.1845
         description: |
             A headless sway Wayland desktop with Chrome, served over VNC on :5900
             Composes sway-desktop (the sway compositor + Chrome browser + waybar +
@@ -46,7 +46,7 @@ sway-desktop-vnc:
             # lag as plugin-cdp.)
             - '@github.com/opencharly/plugin-wl/candy/plugin-wl:v2026.242.0610'
         candy:
-            - '@github.com/opencharly/layer-sway-desktop:v2026.238.2103'
+            - '@github.com/opencharly/layer-sway-desktop:v2026.242.1839'
             - '@github.com/opencharly/pod-wayvnc:v2026.237.559'
         env:
             WLR_RENDERER: "pixman"
