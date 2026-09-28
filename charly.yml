@@ -1,7 +1,5 @@
-version: 2026.232.0520
 sway-desktop-vnc:
     candy:
-        version: 2026.243.1043
         description: |
             A headless sway Wayland desktop with Chrome, served over VNC on :5900
             Composes sway-desktop (the sway compositor + Chrome browser + waybar +
